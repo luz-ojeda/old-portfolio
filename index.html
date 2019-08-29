@@ -12,13 +12,23 @@
 </head>
 
 <body>
+  <script>
+    function goTo(id) {
+      let destination = document.getElementById(id);
+      let yCoord = destination.offsetTop - 48;
+      window.scrollTo({
+        top: yCoord,
+        behavior: "smooth"
+      });
+    }
+  </script>
   <header>
     <nav id="navbar">
       <ul id="nav-list">
-        <li><a class="nav-link" href="#projects-section"><span class="asd"></span><span
-              class="underline">Portfolio</span></a></li>
-        <li><a class="nav-link" href="#about-section"><span class="underline">Sobre mí</span></a></li>
-        <li><a class="nav-link" href="#contact-section"><span class="underline">Contacto</span></a></li>
+        <li><div class="nav-link" onclick="goTo('projects-section')"><span
+              class="underline">Portfolio</span></div></li>
+        <li><div class="nav-link" onclick="goTo('about-section')"><span class="underline">Sobre mí</span></div></li>
+        <li><div class="nav-link" onclick="goTo('contact-section')"><span class="underline">Contacto</span></div></li>
       </ul>
     </nav>
   </header>
