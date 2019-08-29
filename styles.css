@@ -16,6 +16,10 @@ h3 {
   font-family: 'Roboto', monospace;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 h3 {
   font-style: italic;
   font-weight: 400;
@@ -60,8 +64,10 @@ header {
 .nav-link {
   color: #F6F2F1;
   padding: 16.5px;
-  text-decoration: none;
-  transition: 250ms;
+  cursor: pointer;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
 }
 
 /* Hover effect */
@@ -129,13 +135,15 @@ header {
   width: 100%;
 }
 
-#welcome-section>a {
+.arrow-container {
+  color: #33313b;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  text-decoration: none;
-  position: absolute;
   left: 50%;
   margin-left: -21px;
+  position: absolute;
+  text-decoration: none;
   top: 85vh;
 }
 
@@ -162,11 +170,6 @@ header {
 .arrow-before:hover+.arrow-after {
   opacity: 1;
   transform: translateY(-15px);
-}
-
-#welcome-section>a,
-#welcome-section>a:visited {
-  color: #33313b;
 }
 
 /* PROJECTS SECTION */
@@ -238,6 +241,10 @@ header {
 .project-tile:hover .project-title-effect:after {
   opacity: 1;
   right: 0;
+}
+
+.project-tile:hover {
+  transform: scale(1.1)
 }
 
 /* ABOUT SECTION */
