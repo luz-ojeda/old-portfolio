@@ -287,8 +287,6 @@ header {
 .about-image {
   border-radius: 50%;
   margin: 5px auto;
-  width:10%;
-  height:10%;
   border: 1px solid lightgray;
 }
 
@@ -429,7 +427,6 @@ header {
     top: 20px;
   }
 
-
   .arrow-before:hover+.arrow-after {
     opacity: 0;
   }
@@ -448,12 +445,6 @@ header {
   .about-container {
     padding: 10px 8px 20px 8px;
     width: 95%;
-  }
-
-  .about-image {
-    margin-top: 25px;
-    width: 150px;
-    height: 150px;
   }
 
   .about-container p {
