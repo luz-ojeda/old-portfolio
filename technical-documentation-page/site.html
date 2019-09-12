@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Asar|Libre+Caslon+Text&display=swap" rel="stylesheet"> 
+
+  <title>FCC: Technical Documentation Page challenge (Python)</title>
+
+</head>
+
+<body>
+  <nav id="navbar">
+    <header class="navbar-header">
+      <h1>Python documentation</h1>
+    </header>
+    <div class="nav-link-container">
+      <a href="#Introduction" class="nav-link"><span class = "underline">Introduction</span></a>
+      <a href="#What_is_Python?" class="nav-link"><span class = "underline">What is Python?</span></a>
+      <a href="#Using_the_Interpreter" class="nav-link"><span class = "underline">Using the Interpreter</span></a>
+      <a href="#An_Informal_Introduction_to_Python" class="nav-link"><span class = "underline">An Informal Introduction to Python</span></a>
+      <a href="#Control_Flow_Tools:_if_and_else" class="nav-link"><span class = "underline">Control Flow Tools: if and else</span></a>
+      <a href="#For_and_while" class="nav-link"><span class = "underline">For and while</span></a>
+      <a href="#Data_Structures" class="nav-link"><span class = "underline">Data Structures</span></a>
+      <a href="#Modules" class="nav-link"><span class = "underline">Modules</span></a>
+      <div>
+  </nav>
+  <div class="main-doc-container">
+    <main id="main-doc">
+      <!-- main section -> section header -> p -->
+      <section class="main-section" id="Introduction">
+        <header class="section-header" id="introduction">
+          Introduction
+        </header>
+        <p>Python is an easy to learn, powerful programming language. It has:
+          <ul>
+            <li>Efficient</li>
+            <li>High-level data structures</li>
+            <li>Simple but effective approach to object-oriented programming</li>
+          </ul>
+        </p>
+
+        <p>Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language
+          for
+          scripting and rapid application development in many areas on most platforms.
+        </p>
+
+        <p>The Python interpreter and the extensive standard library are freely available in source or binary form for
+          all
+          major platforms from the <a href="https://www.python.org/">Python Web site</a>, and may be freely distributed.
+          The same site also contains distributions of and pointers to many free third party Python modules, programs
+          and
+          tools, and additional documentation.
+        </p>
+
+        <p>This tutorial introduces the reader informally to the basic concepts and features of the Python language and
+          system. It helps to have a Python interpreter handy for hands-on experience, but all examples are
+          self-contained, so the tutorial can be read off-line as well.
+        </p>
+
+        <p>For a description of standard objects and modules, see The Python Standard Library. The Python Language
+          Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and
+          Embedding the Python Interpreter and Python/C API Reference Manual. There are also several books covering
+          Python
+          in depth.
+        </p>
+
+        <p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly
+          used
+          feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of
+          the
+          language’s flavor and style.
+        </p>
+      </section>
+      <section class="main-section" id="What_is_Python?">
+        <header class="section-header" id="what-is-python">
+          What is Python?
+        </header>
+        <p>Python is an <em>interpreted, object-oriented, high-level programming language</em><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/200px-Python-logo-notext.svg.png" alt= "Python logo"> with dynamic semantics
+          created around the 1980s. Its high-level built in data structures, combined with dynamic typing and dynamic
+          binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue
+          language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability
+          and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages
+          program modularity and code reuse. The Python interpreter and the extensive standard library are available in
+          source or binary form without charge for all major platforms, and can be freely distributed.
+        </p>
+
+        <p>Often, programmers fall in love with Python because of the increased productivity it provides. Since there is
+          no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or
+          bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises
+          an
+          exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level
+          debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting
+          breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself,
+          testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to
+          add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very
+          effective. </p>
+      </section>
+      <section class="main-section" id="Using_the_Interpreter">
+        <header class="section-header" id="using-interpreter">
+          Using the Interpreter
+        </header>
+        <p>The Python interpreter is usually installed as <em>/usr/local/bin/python3.7</em> on those machines where it
+          is
+          available; putting <em>/usr/local/bin</em> in your Unix shell’s search path makes it possible to start it by
+          typing the command:
+          <code class="code"> python3.7</code>
+          to the shell. 1 Since the choice of the directory where the interpreter lives is an installation option, other
+          places are possible; check with your local Python guru or system administrator. (E.g.,
+          <em>/usr/local/python</em> is a popular alternative location.)</p>
+
+        <p>Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the
+          interpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the
+          following command: <code class="code">quit()</code> </p>
+      </section>
+      <section class="main-section" id="An_Informal_Introduction_to_Python">
+        <header class="section-header" id="informal-introduction">
+          An Informal Introduction to Python
+        </header>
+        <p>In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and
+          …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do
+          not
+          begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an
+          example means you must type a blank line; this is used to end a multi-line command.</p>
+        <p>Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments
+          in Python start with the hash character, <em>#</em>, and extend to the end of the physical line. A comment may
+          appear at the start of a line or following whitespace or code, but not within a string literal. A hash
+          character
+          within a string literal is just a hash character. Since comments are to clarify code and are not interpreted
+          by
+          Python, they may be omitted when typing in examples.</p>
+
+        <code class="code"># this is the first comment<br/>
+          spam = 1  # and this is the second comment<br/>
+          # ... and now a third!<br/>
+          text = "# This is not a comment because it's inside quotes."</code>
+
+        <h2>Using Python as a Calculator</h2>
+        <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value.
+          Expression syntax is straightforward: the operators <span class="character">+</span>, <span
+            class="character">-</span>, <span class="character">*</span> and <span class="character">/</span> work just
+          like in most other languages (for example, Pascal or C); parentheses (<span class="character">()</span>) can
+          be
+          used for grouping. For example:
+          <code class="code"> >>> 2 + 2 <br>
+                  4 <br>
+                  >>> 50 - 5*6 <br>
+                  20 <br>
+                  >>> (50 - 5*6) / 4 <br>
+                  5.0 <br>
+                  >>> 8 / 5  # division always returns a floating point  number <br>
+        1.6 </code>
+        </p>
+        <p>The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the
+          next
+          interactive prompt:
+        </p>
+        <code class="code">>>> width = 20 <br>
+          >>> height = 5 * 9 <br>
+          >>> width * height <br>
+        900
+        </code>
+      </section>
+      <section class="main-section" id="Control_Flow_Tools:_if_and_else">
+        <header class="section-header" id="if-else">
+          Control Flow Tools: if and else
+        </header>
+        <p>Perhaps the most well-known statement type is the <span class=character>if</span> statement. For example:
+          <code class="code">>>> x = int(input("Please enter an integer: ")) <br>
+            Please enter an integer: 42 <br>
+            >>> if x < 0: <br>
+            ...     x = 0 <br>
+            ...     print('Negative changed to zero') <br>
+            ... elif x == 0: <br>
+            ...     print('Zero') <br>
+            ... elif x == 1: <br>
+            ...     print('Single') <br>
+            ... else: <br>
+            ...     print('More')<br>
+            ...<br>
+            More</code>
+          There can be zero or more <em>elif</em> parts, and the <em>else</em> part is optional. The keyword
+          <em>‘elif’</em> is short for <em>‘else if’</em>, and is useful to avoid excessive indentation. An <em>if …
+            elif
+            … elif</em> … sequence is a substitute for the <span class="character">switch</span> or <span
+            class="character">case</span> statements found in other languages.
+        </p>
+
+      </section>
+      <section class="main-section" id="For_and_while">
+        <header class="section-header" id="for-while">
+          For and while
+        </header>
+        <p>Python has two primitive loop commands:<br>
+          <ul>
+            <li><span class="character">while loops<span></li>
+            <li><span class="character">for loops<span></li>
+          </ul>
+        </p>
+        <p>The <em>for</em> statement in Python differs a bit from what you may be used to in C or Pascal. Rather than
+          always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to
+          define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of
+          any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun
+          intended):
+          <code class="code"> # Measure some strings:<br>
+          ... words = ['cat', 'window', 'defenestrate']<br>
+          >>> for w in words:<br>
+          ...     print(w, len(w))<br>
+          ...<br>
+          cat 3<br>
+          window 6<br>
+          defenestrate 12</code></p>
+        <p>With the <em>while</em> loop we can execute a set of statements as long as a condition is true. For
+          example:<br>
+          <code class="code">i = 1 <br> while i < 6: <br>&nbsp; print(i)<br>&nbsp; i+=1</code>
+          The <em>while</em> loop requires relevant variables to be ready, in this example we need to define an indexing
+          variable, <span class="character">i</span>, which we set to 1.
+        </p>
+
+
+      </section>
+      <section class="main-section" id="Data_Structures">
+        <header class="section-header" id="data-structures">
+          Data Structures
+        </header>
+        <p>There are four built-in data structures in Python:
+          <ul>
+            <li>Lists</li>
+            <li>Tuples</li>
+            <li>Dictionaries</li>
+            <li>Sets</li>
+          </ul>
+        </p>
+        <h2>Lists</h2>
+        <p>A <span class="character">list</span> is a data structure that holds an ordered collection of items i.e. you
+          can store a sequence of items in a list. This is easy to imagine if you can think of a shopping list where you
+          have a list of items to buy, except that you probably have each item on a separate line in your shopping list
+          whereas in Python you put commas in between them.</p>
+        <p>The list of items should be enclosed in square brackets so that Python understands that you are specifying a
+          list. Once you have created a list, you can add, remove or search for items in the list. Since we can add and
+          remove items, we say that a list is a mutable data type i.e. this type can be altered.</p>
+
+        <h2>Tuples</h2>
+        <p>Tuples are used to hold together multiple objects. Think of them as similar to lists, but without the
+          extensive
+          functionality that the list class gives you. One major feature of tuples is that they are <em>immutable</em>
+          like strings i.e. you cannot modify tuples.</p>
+        <p>Tuples are usually used in cases where a statement or a user-defined function can safely assume that the
+          collection of values (i.e. the tuple of values used) will not change.</p>
+
+        <h2>Dictionaries</h2>
+        <p>A dictionary is like an address-book where you can find the address or contact details of a person by knowing
+          only his/her name i.e. we associate <em>keys</em> (name) with <em>values</em> (details). Note that the key
+          must
+          be unique just like you cannot find out the correct information if you have two persons with the exact same
+          name.For example:
+          <ul>
+            <li>'name': 'Jack'</li>
+            <li>'address': 'Downtown'</li>
+            <li>'hair color': 'black'</li>
+          </ul>
+        </p>
+
+        <h2>Sets</h2>
+        <p>Sets are unordered collections of simple objects. These are used when the existence of an object in a
+          collection is more important than the order or how many times it occurs.</p>
+
+        <p>Using sets, you can test for membership, whether it is a subset of another set, find the intersection between
+          two sets, and so on.</p>
+      </section>
+      <section class="main-section" id="Modules">
+        <header class="section-header" id="modules">
+          Modules
+        </header>
+        <p>If you quit from the Python interpreter and enter it again, the definitions you have made (functions and
+          variables) are lost. Therefore, if you want to write a somewhat longer program, you are better off using a
+          text
+          editor to prepare the input for the interpreter and running it with that file as input instead. This is known
+          as
+          creating a script. As your program gets longer, you may want to split it into several files for easier
+          maintenance. You may also want to use a handy function that you’ve written in several programs without copying
+          its definition into each program.
+
+          <p>To support this, Python has a way to put definitions in a file and use them in a script or in an
+            interactive
+            instance of the interpreter. Such a file is called a module; definitions from a module can be imported into
+            other modules or into the main module (the collection of variables that you have access to in a script
+            executed at the top level and in calculator mode). Some of the most used modules are:</p>
+          <ul>
+            <li><a href = "https://scikit-learn.org/stable/">Scikit-Learn</a></li>
+            <li><a href = "https://www.tensorflow.org/">TensorFlow</a></li>
+            <li><a href = "https://numpy.org/">Numpy</a></li>
+            <li><a href = "https://keras.io/">Keras</a></li>
+            <li><a href = "https://pytorch.org/">PyTorch</a></li>
+            <li><a href = "https://lightgbm.readthedocs.io/en/latest/">LightGBM</a></li>
+          </ul>
+        </p>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
