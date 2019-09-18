@@ -113,6 +113,11 @@ header {
   background-color: #222831;
 }
 
+.nav-link > a, .nav-link > a:visited {
+  text-decoration:none;
+  color: #F6F2F1;
+}
+
 
 /* WELCOME SECTION */
 
