@@ -311,6 +311,16 @@ header {
   justify-content: space-around;
 }
 
+.about-text-links {
+  color: #dcae91;
+  text-decoration: none;
+}
+
+.about-text-links:hover {
+  text-decoration: underline;
+}
+
+
 .icon-container {
   display: flex;
   flex-direction: column;
