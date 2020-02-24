@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Ezequiel Ojeda</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/3431e6ad2c.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto:400i,500|Open+Sans:600&display=swap"
+    rel="stylesheet">
+  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+</head>
+
+<body>
+  <script>
+    function goTo(id) {
+      let destination = document.getElementById(id);
+      let yCoord = destination.offsetTop - 48;
+      window.scrollTo({
+        top: yCoord,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  <header>
+    <nav id="navbar">
+      <ul id="nav-list">
+        <li>
+          <div class="nav-link" onclick="goTo('projects-section')"><span class="underline">Portfolio</span></div>
+        </li>
+        <li>
+          <div class="nav-link" onclick="goTo('about-section')"><span class="underline">Sobre mí</span></div>
+        </li>
+        <li>
+          <div class="nav-link" onclick="goTo('contact-section')"><span class="underline">Contacto</span></div>
+        </li>
+        <li>
+          <a class="underline nav-link" href="/assets/Lucas_E_Ojeda_CV.pdf">CV</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="welcome-section">
+    <div id="welcome-container" class="text-center">
+      <h1>Lucas E. Ojeda</h1>
+      <h3 class="italic">desarrollo front-end</h3>
+    </div>
+    <div onclick="goTo('projects-section')" class="arrow-container"><i
+        class="fas fa-chevron-down fa-3x arrow-before"></i><i class="fas fa-chevron-down fa-3x arrow-after"></i></div>
+  </section>
+
+  <section id="projects-section">
+    <div class="section-title text-center">
+      <h2>Algunos de mis trabajos</h2>
+      <hr class="title-rule">
+    </div>
+    <div id="projects-container">
+      <div class="project-tile text-center">
+        <!-- each project has its tile, link(image) and a title (div) (class "project-title") -->
+        <a title="Ir a la página del proyecto" id="project-link" href="/javascript-calculator/index.html"
+          target="_blank">
+          <img class="project-image"
+            src="https://raw.githubusercontent.com/lezojeda/freecodecamp-responsive-web-design/master/portfolio-webpage/images/javascript-calculator-preview.jpg"
+            alt="preview of the JavaScript Calculator's webpage">
+        </a>
+        <div class="project-title"><span class="project-title-effect">Calculadora JavaScript</span></div>
+      </div>
+
+      <div class="project-tile">
+        <a title="Ir a la página del proyecto" id="project-link" href="/markdown-previewer/index.html" target="_blank">
+          <img class="project-image"
+            src="https://raw.githubusercontent.com/lezojeda/freecodecamp-responsive-web-design/master/portfolio-webpage/images/markdown-previewer-preview.jpg"
+            alt="preview of the Markdown Previewer's webpage">
+        </a>
+        <div class="project-title"><span class="project-title-effect">Previewer Markdown</span></div>
+      </div>
+
+      <div class="project-tile">
+        <a title="Ir a la página del proyecto" id="project-link" class="project-link" href="/pomodoro-clock/index.html"
+          target="_blank">
+          <img class="project-image"
+            src="https://raw.githubusercontent.com/lezojeda/freecodecamp-responsive-web-design/master/portfolio-webpage/images/pomodoro-clock-preview.jpg"
+            alt="preview of the Pomodoro Clock's page"></a>
+        <div class="project-title"><span class="project-title-effect">Reloj Pomodoro</span></div>
+      </div>
+
+      <div class="project-tile">
+        <a title="Ir a la página del proyecto en glitch.com" id="project-link" class="project-link"
+          href="https://apis-microservices-lezojeda.glitch.me/" target="_blank">
+          <img class="project-image"
+            src="https://res.cloudinary.com/dgfn49hld/image/upload/v1568725476/portfolio-web/apis-microservices_pn2zk9.png"
+            alt="preview of the Technical Document Project's page">
+        </a>
+        <div class="project-title"><span class="project-title-effect">APIs y microservicios</span></div>
+      </div>
+
+      <div class="project-tile">
+        <a title="Ir a la página del proyecto" id="project-link" class="project-link" href="/quote-machine/index.html"
+          target="_blank">
+          <img class="project-image"
+            src="https://raw.githubusercontent.com/lezojeda/freecodecamp-responsive-web-design/master/portfolio-webpage/images/quote-machine-preview.jpg"
+            alt="preview of the Random Quote Machine's page" width="5"></a>
+        <div class="project-title"><span class="project-title-effect">Random Quote Machine</span></div>
+      </div>
+
+      <div class="project-tile">
+        <a title="Ir a la página del proyecto" id="project-link" class="project-link" href="/drum-machine/index.html"
+          target="_blank">
+          <img class="project-image"
+            src="https://raw.githubusercontent.com/lezojeda/freecodecamp-responsive-web-design/master/portfolio-webpage/images/drum-machine-preview.jpg"
+            alt="preview of the Drum Machine's page"></a>
+        <div class="project-title"><span class="project-title-effect">Máquina de Percusión</span></div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section id="about-section">
+    <div class="section-title">
+      <h2>Sobre mí</h2>
+      <hr class="title-rule">
+    </div>
+    <img src='https://res.cloudinary.com/dgfn49hld/image/upload/v1567189253/portfolio-web/foto_ykhslz.png' width=130
+      height=177 class='about-image' />
+    <div class="about-container">
+      <p>Mi nombre es Lucas Ezequiel Ojeda, tengo 26 años y soy de Buenos Aires. Actualmente me encuentro trabajando como desarrollador front-end en <a class="about-text-links" href="https://www.bigbox.com.ar/">Bigbox Argentina</a> (stack: Vue.Js, GraphQL y Django) desde Octubre del 2019.</p>
+      <p>Estudié desarrollo web full-stack de forma autodidacta en FreeCodeCamp.org principalmente, entre otros, habiendo realizado
+         pequeños proyectos por mi cuenta visibles en mi perfil de GitHub antes de incorporarme a la empresa en la que me encuentro en la actualidad.
+        Algunas de las tecnologías y recursos de los que tengo conocimiento y utilizo son: </p>
+
+      <div class="about-icons">
+        <div class="icon-container">
+          <i class="fab fa-html5 fa-3x" title="HTML5">
+          </i>
+          <h4>HTML5</h4>
+        </div>
+        <div class="icon-container">
+          <i class="fab fa-css3-alt fa-3x" title="CSS3">
+          </i>
+          <h4>CSS3</h4>
+        </div>
+        <div class="icon-container">
+          <i class="fab fa-js-square fa-3x" title="JavaScript">
+          </i>
+          <h4>JavaSript</h4>
+        </div>
+        <div class="icon-container">
+          <i class="fab fa-react fa-3x" title="ReactJS">
+          </i>
+          <h4>ReactJS</h4>
+        </div>
+        <div class="icon-container">
+          <span class="iconify" data-icon="simple-icons:redux" data-inline="false" title="Redux"></span>
+          <h4>Redux</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <div class="section-title">
+      <h2>Contacto</h2>
+    </div>
+    <div id="profile-link-container" class="text-center">
+      <div class="contact">
+        <a title="Link a mi perfil en GitHub" class="profile-link" href="https://github.com/lezojeda" target="_blank">
+          <i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <div class="contact">
+        <a title="lezojeda@gmail.com" class="profile-link" href="mailto:lezojeda@gmail.com">
+          <i class="fas fa-at"></i> E-mail</a>
+      </div>
+      <div class="contact">
+        <a title="Link a mi perfil en LinkedIn" class="profile-link" href="https://www.linkedin.com/in/lezojeda/"
+          target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="contact">
+        <a title="Link a mi perfil en FreeCodeCamp" class="profile-link" href="https://www.freecodecamp.org/lezojeda"
+          target="_blank">
+          <i class="fab fa-free-code-camp"></i> FreeCodeCamp</a>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
